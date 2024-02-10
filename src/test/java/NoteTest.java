@@ -13,10 +13,10 @@ class NoteTest {
 	void initialNoteShouldBeEmpty() {
 		TextFile textFile = mock(TextFile.class);
 		when(textFile.read(any())).thenReturn("");
-		Note note = new Note(textFile);
+		Note note =         new Note(textFile);
 
 		String expected = "";
-		String actual = note.read();
+				String actual = note.read();
 		assertEquals(expected, actual);
 	}
 
@@ -87,7 +87,7 @@ class NoteTest {
 		Note note = new Note(textFile, birthdayChecker);
 
 		note.writeAsync("Reading book", Schedulers.trampoline())
-			.test()
-			.assertComplete();
+				.test()
+				.assertComplete();
 	}
 }

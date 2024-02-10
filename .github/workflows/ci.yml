@@ -4,6 +4,9 @@ on:
     branches: [ main ]
 
 jobs:
+  linter:
+    name: Run Linter
+    runs-on: ubuntu-latest
   unit-test:
     name: Run Unit Test
     runs-on: ubuntu-latest
